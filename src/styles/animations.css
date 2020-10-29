@@ -1,3 +1,105 @@
+.bubble-pulse{
+    animation: bubble-pulse 5s infinite linear;
+  }
+
+.bubble1{
+    animation: bubble1 14s infinite linear;
+  }
+  
+  .bubble2{
+      animation: bubble2 17s infinite linear;
+      animation-delay: 1s;
+  }
+  
+  .bubble3{
+      animation: bubble3 15s infinite linear;
+       animation-delay: 2s;
+  }
+
+  
+@keyframes bubble1 {
+    0% {
+        opacity: 0;
+        transform: translateY(100px) translateX(0) scale(0.5);
+    }
+    33% {
+        opacity: 90%;
+        transform: translateY(70px) translateX(10px) scale(0.3);
+    }
+    66% {
+        transform:  translateY(30px) translateX(0) scale(0.7);
+    }
+
+    100% {
+        opacity: 100%;
+        transform: translateY(0px) translateX(15px) scale(1);
+    }
+}
+
+@keyframes bubble2 {
+    0% {
+        opacity: 0;
+        transform: translateY(100px) translateX(30px) scale(0.4);
+    }
+    33% {
+        opacity: 90%;
+        transform: translateY(70px) translateX(10px);
+    }
+    66% {
+        transform:  translateY(30px) translateX(20px) scale(1);
+    }
+
+    100% {
+        opacity: 100%;
+        transform: translateY(0px) translateX(30px) scale(1.2);
+    }
+}
+
+@keyframes bubble3 {
+    0% {
+        opacity: 0;
+        transform: translateY(100px) translateX(70px) scale(0.3);
+    }
+    33% {
+        opacity: 90%;
+        transform: translateY(70px) translateX(80px) scale(0.7);
+    }
+    66% {
+        transform:  translateY(30px) translateX(85px) scale(1.1);
+    }
+
+    100% {
+        opacity: 100%;
+        transform: translateY(0px) translateX(70px) scale(1.4);
+    }
+}
+
+
+@keyframes bubble-pulse {
+    0% {
+        transform: scale(1) translateY(0);
+    }
+
+    25% {
+        transform: scale(0.7) translateY(-3px);
+    }
+
+    50% {
+        transform: scale(1) translateY(0);
+    }
+
+    75% {
+        transform: scale(1.2) translateY(3px);
+    }
+
+    100% {
+        transform: scale(1) translateY(0);
+    }
+}
+
+
+
+
 .slide-in {
     animation: moveInTop 0.5s ease-in;
 }
