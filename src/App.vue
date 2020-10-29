@@ -1,7 +1,9 @@
 <template>
+
   <div id="app">
     <v-app>
       <v-main fluid fill-height>
+         
         <div class="white">
           <div class="d-flex">
             <Logo />
@@ -42,6 +44,7 @@
             </v-tabs>
           </v-row>
         </nav>
+  
         <!-- /nav tabs -->
 
         <!--        <v-tabs-items v-model="tab">
@@ -58,16 +61,24 @@
         <v-slide-x-reverse-transition :hide-on-leave="true">
           <router-view class="mt-5"> </router-view>
         </v-slide-x-reverse-transition>
+         <ParticlesJS>
+             </ParticlesJS>
       </v-main>
     </v-app>
+
   </div>
+   
 </template>
 
 <script>
 import Logo from "@/components/Logo.vue";
+import ParticlesJS from '@/components/Particles.vue'
 export default {
   props: [""],
-  components: { Logo },
+  components: { Logo, ParticlesJS },
+  created(){
+
+  },
   data: () => ({
     tab: 0,
     languages: ["en", "de"],

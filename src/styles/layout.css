@@ -1,7 +1,17 @@
 #app {
-    font-family: Montserrat, sans-serif;
-    color: #25292e;
-    
-    background: rgb(207, 215, 228); 
-/* background: linear-gradient(186deg, rgba(41,41,162,1) 35%, rgba(0,40,255,1) 100%);  */
+  font-family: Montserrat, sans-serif;
+  color: #25292e;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+
+  /* background: rgb(207, 215, 228);  */
+  /* background: linear-gradient(186deg, rgba(41,41,162,1) 35%, rgba(0,40,255,1) 100%);  */
+}
+
+#particles-js {
+  position: absolute;
+  background: #115699;
+  width: 100%;
+  height: 100%;
 }
