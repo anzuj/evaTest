@@ -17,6 +17,31 @@ Vue.use(VueRouter)
     path: '/about',
     name:"about",
     component: () => import('../views/About.vue')
+  },
+  {
+    path: '/jobs',
+    name:"jobs",
+    component: () => import('../views/Jobs.vue')
+  },
+  {
+    path: '/technologies',
+    name:"technologies",
+    component: () => import('../views/Tech.vue')
+  },
+  {
+    path: '/applications',
+    name:"applications",
+    component: () => import('../views/Applications.vue')
+  },
+  {
+    path: '/downloads',
+    name:"downloads",
+    component: () => import('../views/Downloads.vue')
+  },
+  {
+    path: '/contact',
+    name:"contact",
+    component: () => import('../views/Contact.vue')
   }
 ]
 

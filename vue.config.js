@@ -1,7 +1,7 @@
 module.exports = {
     transpileDependencies:  ['vuetify', 'dotenv'],
     publicPath: process.env.NODE_ENV === 'production'
-    ? '/evatest/'
+    ? '/evaTest/'
     : '/',
     pluginOptions: {
       i18n: {

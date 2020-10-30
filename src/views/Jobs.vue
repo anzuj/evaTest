@@ -1,7 +1,7 @@
 <template>
-  <v-card class="mx-auto mt-10" width="200">
-    <v-card-text class="text-center">START</v-card-text>
-  </v-card>
+   <div class="text-center pa-10 slide-in">
+       <h3>Jobs content</h3>
+</div>
 </template>
 
 <script>
@@ -14,4 +14,3 @@ export default {
     computed: {}
 };
 </script>
-

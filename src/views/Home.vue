@@ -1,31 +1,56 @@
 <template>
   <div class="pa-10">
-    <v-row >
-        <v-col cols="3" style="position: relative;">
+    <v-row align="center" justify="center">
+      <v-col cols="12" md="6" lg="4">
+        <v-card flat color="transparent">
+          <h2
+            :class="{
+              'text-right': $vuetify.breakpoint.mdAndUp,
+              'mobile-heading': $vuetify.breakpoint.smAndDown,
+            }"
+            class="slide-in"
+          >
+            {{ $t("home.title") }}
+          </h2>
+        </v-card>
+      </v-col>
+      <v-col cols="12" sm="7" md="6" xl="4">
+        <v-img :src="require(`@/assets/home.png`)" contain />
+      </v-col>
+    </v-row>
 
-         <h1 class="heading1 slide-in" >{{ $t("home.title") }}</h1>
-          <!-- <v-img :src="require(`@/assets/banner.jpg`)" contain style="width: 70%;" /> -->
-      <!-- <div style="position: absolute;
-  top: 42px;
-  left: 40px;">
-        <h1 class="heading1 slide-in" >{{ $t("home.title") }}</h1>
-      </div> -->
+    <v-row justify="center" align="center">
+      <v-col :order="$vuetify.breakpoint.xs ? 2 : 1" cols="12" md="5" xl="3">
+        <v-img :src="require(`@/assets/home2.png`)" contain />
+      </v-col>
 
-   </v-col>
-         <v-col style="max-width:400px" class="text-center">
+      <v-col
+        :order="$vuetify.breakpoint.xs ? 1 : 2"
+        style="max-width:400px"
+        class="text-center"
+      >
         <v-img
           style="display: inline-block;"
           :src="require(`@/assets/1.png`)"
           contain
-          height="200"
+          :height="$vuetify.breakpoint.xs ? 100 : 150"
         />
         <h4>{{ $t("home.award") }}</h4>
         <p>{{ $t("home.awardText") }}</p>
-       <v-icon small color="red darken-2" style="padding-bottom: 2px">mdi-play-box</v-icon> <a class="text-decoration-none" href="https://www.youtube.com/watch?v=MwDtE_6RNB4" target="_blank" >Evatherm on Youtube</a>
+        <v-icon
+          small
+          color="red darken-2"
+          style="padding-bottom: 2px; padding-right: 2px"
+          >mdi-play-box</v-icon
+        >
+        <a
+          class="text-decoration-none"
+          href="https://www.youtube.com/watch?v=MwDtE_6RNB4"
+          target="_blank"
+          >Evatherm on Youtube</a
+        >
       </v-col>
-  
     </v-row>
-
   </div>
 </template>
 
@@ -40,7 +65,8 @@ export default {
 </script>
 
 <style>
-.heading1 {
-  /* color: white */
+.mobile-heading {
+  font-size: 1.3rem;
+  text-align: center;
 }
 </style>

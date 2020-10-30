@@ -1,30 +1,8 @@
 <template>
-  <div class="ml-10 mr-2" style="max-width: 100px">
-    <!--  <div class="mx-2">
-      <v-img
-      :class="{'selected':$i18n.locale === 'de' }"
-        class="hover-pointer"
-        @click="$i18n.locale = 'de'"
-        :src="require('../assets/flags/de.png')"
-        contain
-        width="30"
-      />
-    </div>
-
-     <div class="mx-2">
-      <v-img
-       :class="{'selected':$i18n.locale === 'en' }"
-        class="hover-pointer"
-        @click="$i18n.locale = 'en'"
-        :src="require('../assets/flags/en.png')"
-        contain
-        width="30"
-      />
-    </div> -->
-    <!--  -->
-
+  <div class="" style="max-width: 100px">
     <v-select
-    background-color="transparent"
+    class=""
+      background-color="transparent"
       hide-details
       solo
       flat
@@ -65,7 +43,5 @@ export default {
 </script>
 
 <style scoped>
-/* .selected {
-  opacity: 0.5;
-} */
+
 </style>

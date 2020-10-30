@@ -1,6 +1,6 @@
 <template>
    <div class="text-center pa-10 slide-in">
-       <h3>About content</h3>
+       <h3>Technologies content</h3>
 </div>
 </template>
 
