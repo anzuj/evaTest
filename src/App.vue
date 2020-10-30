@@ -11,20 +11,22 @@
         </nav>
 
         <v-container>
-          <router-view class="mt-5"> </router-view>
+          <router-view class=""> </router-view>
         </v-container>
 
-        <v-footer :color="$vuetify.breakpoint.xs ? 'primary darken-1':'transparent'" :dark="$vuetify.breakpoint.xs" class="mt-16" v-show="$route.name ==='home'">
+        <v-footer
+          :color="$vuetify.breakpoint.xs ? 'primary darken-1' : 'transparent'"
+          :dark="$vuetify.breakpoint.xs"
+          class="mt-16"
+          v-show="$route.name === 'home'"
+        >
           <!-- <div style="height: 5px; background-color: black; width: 100%"></div> -->
           <!-- <div
             style="height: 3px; background-color: black; margin-top: 2px; width: 100%"
           ></div> -->
           <v-row justify="center">
             <v-col class="text-center">
-              <h3 class="mb-1">{{ $t("home.head") }}</h3>
-
-              EVATHERM Ltd. | Hintermättlistr. 3 | Gewerbepark | CH-5506
-              Mägenwil
+              <h3 class="mb-1">{{ $t("home.head") }}</h3>EVATHERM Ltd. | Hintermättlistr. 3 | Gewerbepark | CH-5506 Mägenwil
               <div v-for="contact in contactInfo" :key="contact.text">
                 <v-icon small class="mr-1">{{ contact.icon }}</v-icon>
                 <span>{{ contact.text }}</span>

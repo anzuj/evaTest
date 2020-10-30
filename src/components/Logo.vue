@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="hover-pointer" @click="$router.push({path: '/'})">
     <template v-if="$vuetify.breakpoint.mdAndUp">
       <div class="d-flex pos-relative ma-3">
         <v-img

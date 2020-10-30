@@ -1,5 +1,5 @@
 <template>
-  <div class="pa-10">
+  <v-container class="pa-10 slide-in">
     <v-row align="center" justify="center">
       <v-col cols="12" md="6" lg="4">
         <v-card flat color="transparent">
@@ -8,7 +8,7 @@
               'text-right': $vuetify.breakpoint.mdAndUp,
               'mobile-heading': $vuetify.breakpoint.smAndDown,
             }"
-            class="slide-in"
+            class="slide-in-left"
           >
             {{ $t("home.title") }}
           </h2>
@@ -27,7 +27,7 @@
       <v-col
         :order="$vuetify.breakpoint.xs ? 1 : 2"
         style="max-width:400px"
-        class="text-center"
+        class="text-center slide-in-right"
       >
         <v-img
           style="display: inline-block;"
@@ -51,7 +51,7 @@
         >
       </v-col>
     </v-row>
-  </div>
+  </v-container>
 </template>
 
 <script>

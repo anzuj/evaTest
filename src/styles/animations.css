@@ -116,6 +116,10 @@
     animation: moveInLeft 0.7s ease-in;
 }
 
+.slide-in-right {
+    animation: moveInRight 0.7s ease-in;
+}
+
 .slide-in-left-small {
     animation: moveInLeftSmall 0.2s linear;
 }
@@ -182,6 +186,19 @@
     0% {
         opacity: 0;
         transform: translateX(-100px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+
+@keyframes moveInRight{
+    0% {
+        opacity: 0;
+        transform: translateX(100px);
     }
 
     100% {
