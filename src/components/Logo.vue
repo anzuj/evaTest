@@ -1,7 +1,7 @@
 <template>
-  <div class="hover-pointer" @click="$router.push({path: '/'})">
+  <div class="hover-pointer ma-3" @click="$router.push({path: '/'})">
     <template v-if="$vuetify.breakpoint.mdAndUp">
-      <div class="d-flex pos-relative ma-3">
+      <div class="d-flex pos-relative">
         <v-img
           class="pos-relative"
           :src="require('../assets/logo.png')"
