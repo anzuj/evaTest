@@ -15,7 +15,7 @@
         </v-card>
       </v-col>
       <v-col cols="12" sm="7" md="6" xl="4">
-        <v-img :src="require(`@/assets/home.png`)" contain />
+        <v-img :src="require(`@/assets/home1.png`)" contain />
       </v-col>
     </v-row>
 
