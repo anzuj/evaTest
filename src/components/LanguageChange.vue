@@ -1,7 +1,7 @@
 <template>
-  <div class="" style="max-width: 100px">
+  <div class="" style="max-width: 80px">
     <v-select
-    class=""
+      class=""
       background-color="transparent"
       hide-details
       solo
@@ -14,14 +14,14 @@
           style="display: inline-block"
           :src="require(`../assets/flags/${data.item}.png`)"
           contain
-          height="20"
+          height="18"
         />
       </template>
 
       <template v-slot:selection="data">
         <v-img
           :src="require(`../assets/flags/${data.item}.png`)"
-          height="20"
+          height="18"
           contain
           style="display: inline-block"
         />
@@ -42,6 +42,4 @@ export default {
 };
 </script>
 
-<style scoped>
-
-</style>
+<style scoped></style>

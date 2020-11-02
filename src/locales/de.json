@@ -12,6 +12,8 @@
           },
   "home": {
     "title": "Ihr Engineering Partner für Eindampf- und Kristallisationstechnologie",
+    "evaporation":"Eindampf-",
+    "crystal":"crystallization",
     "head": "HAUPTSITZ",
     "phone": "Tel.",
     "award": "Aargauer Unternehmenspreis 2013",

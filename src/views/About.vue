@@ -1,5 +1,5 @@
 <template>
-  <v-container class="pa-10 slide-in" style="max-width: 800px">
+  <v-container class="pa-10 slide-in aboutContainer">
     <h1 class="primary--text">{{ $t("nav.about") }}</h1>
 
     <v-row justify="center">
@@ -19,6 +19,8 @@
 
       <!--     <v-col :order="$vuetify.breakpoint.smAndDown ? 1 : 2" cols="12" md="4"  >  <v-img max-width="300" :src="require(`@/assets/about.png`)" contain /></v-col> -->
     </v-row>
+
+       <!-- <div style="height: 188px"></div> -->
   </v-container>
 </template>
 
@@ -31,3 +33,12 @@ export default {
   computed: {},
 };
 </script>
+
+<style>
+/* 
+.aboutContainer {
+  min-height: 100%;
+  max-width: 800px;
+  margin-bottom: -188px;
+} */
+</style>

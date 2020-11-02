@@ -1,22 +1,30 @@
 <template>
-  <div>
+  <div style="float:right">
     <div
-      class="d-flex mt-2"
+      class="d-flex "
       style="height: 35px"
       v-if="$vuetify.breakpoint.mdAndUp"
     >
       <div
-        class="px-4 hover-pointer d-flex align-center navItem"
+        class="mt-2 px-3 hover-pointer d-flex align-center navItem"
         :class="{
           'border-right': i < navItems.length - 1,
-          'active-nav': navLink.link === $route.name,
+          'active-nav': navItems.link === $route.name,
         }"
         v-for="(navLink, i) in navItems"
         :key="navLink.text"
         @click="handleNav(navLink)"
       >
-        <div style="font-size: 0.9rem" v-text="$t(navLink.text)"></div>
+        <div
+          class="navText"
+          :class="{
+            'active-nav': navLink.link === $route.name,
+          }"
+          v-text="$t(navLink.text)"
+        ></div>
       </div>
+
+       <LanguageChange class="mt-n1"/>
     </div>
 
     <!-- MOBILE VIEW -->
@@ -36,17 +44,21 @@
 
         <v-list dense class="mt-0 pt-0">
           <template v-for="item in navItems">
-            <v-list-item :key="item.text" :to="item.link" link >
+            <v-list-item :key="item.text" :to="item.link" link>
               <v-list-item-action>
                 <v-icon>{{ item.icon }}</v-icon>
               </v-list-item-action>
               <v-list-item-content>
-                <v-list-item-title style="font-size: 1.2rem" v-text="$t(item.text)"> </v-list-item-title>
+                <v-list-item-title
+                  style="font-size: 1.2rem"
+                  v-text="$t(item.text)"
+                >
+                </v-list-item-title>
               </v-list-item-content>
             </v-list-item>
           </template>
         </v-list>
-         <LanguageChange/>
+        <LanguageChange />
       </v-navigation-drawer>
     </div>
   </div>
@@ -56,7 +68,7 @@
 import LanguageChange from "@/components/LanguageChange.vue";
 export default {
   props: [""],
-  components: {LanguageChange},
+  components: { LanguageChange },
   data: () => ({
     drawer: false,
     navItems: [
@@ -96,8 +108,23 @@ export default {
   font-weight: 600;
 }
 .navItem:hover {
-  color: rgb(55, 85, 185);
+  background-color: rgba(55, 85, 185, 0.048);
 }
 
+.navText {
+  white-space: nowrap;
+  font-size: 0.85rem;
+}
 
+@media only screen and (max-width: 1200px) {
+  .navText {
+    font-size: 0.7rem;
+  }
+}
+
+@media only screen and (max-width: 1050px) {
+  .navText {
+    font-size: 0.65rem;
+  }
+}
 </style>
