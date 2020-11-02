@@ -1,14 +1,9 @@
 <template>
-  <div class="hover-pointer ma-3" @click="$router.push({path: '/'})">
-    <template v-if="$vuetify.breakpoint.mdAndUp">
-      <div class="d-flex pos-relative">
-        <v-img
-          class="pos-relative"
-          :src="require('../assets/logo.png')"
-          contain
-          height="100"
-          width="100"
-        />
+  <div class="hover-pointer ma-3" @click="$router.push({ path: '/' })">
+    <!-- v-if="$vuetify.breakpoint.mdAndUp" -->
+    <template>
+      <div id="logoWrapper" class="d-flex">
+        <img src="../assets/logo.png" id="logoImg" />
         <div class="bubble bubble1"></div>
         <div class="bubble bubble2"></div>
         <div class="bubble bubble3"></div>
@@ -25,9 +20,9 @@
     </template>
 
     <!-- MOBILE VIEW -->
-    <template v-else>
+    <!-- <template v-else>
       <v-img :src="require('../assets/logo-image.png')" contain width="200" />
-    </template>
+    </template> -->
   </div>
 </template>
 
@@ -42,6 +37,41 @@ export default {
 </script>
 
 <style>
+#logoWrapper {
+  width: 260px;
+  height: 85px;
+}
+
+#logoImg {
+  object-fit: contain;
+  position: relative;
+  height: 100%;
+}
+
+#logotext {
+  font-family: "Nunito Sans", sans-serif;
+  position: relative;
+  left: -24%;
+  top: 18%;
+}
+
+#evatherm {
+  font-size: 40px;
+  color: #005591;
+  font-style: italic;
+  font-weight: 600;
+  transform: skewX(-10deg);
+}
+
+#crystal {
+  font-size: 10px;
+  line-height: 1;
+  color: rgb(15, 56, 102);
+  position: relative;
+  top: -12px;
+  left: 31%;
+}
+
 .bubble {
   position: absolute;
   width: 10px;
@@ -87,27 +117,18 @@ export default {
   left: 70px;
 }
 
-#logotext {
-  font-family: "Nunito Sans", sans-serif;
-  position: relative;
-  left: -72px;
-  top: 10px;
-}
+@media only screen and (max-width: 1050px) {
+  #logoWrapper {
+    width: 195px;
+    height: 63px;
+  }
 
-#evatherm {
-  font-size: 47px;
-  color: #005591;
-  font-style: italic;
-  font-weight: 600;
-  transform: skewX(-10deg);
-}
+  #evatherm {
+    font-size: 30px;
+  }
 
-#crystal {
-  font-size: 12px;
-  line-height: 1;
-  color: rgb(15, 56, 102);
-  position: relative;
-  top: -10px;
-  left: 78px;
+  #crystal {
+    font-size: 8px;
+  }
 }
 </style>

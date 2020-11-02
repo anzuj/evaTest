@@ -25,15 +25,18 @@
       </v-col>
 
       <v-col
+        cols="12"
+        sm="7"
+        md="5"
+        xl="4"
         :order="$vuetify.breakpoint.xs ? 1 : 2"
-        style="max-width:400px"
         class="text-center slide-in-right"
       >
         <v-img
           style="display: inline-block;"
           :src="require(`@/assets/1.png`)"
           contain
-          :height="$vuetify.breakpoint.xs ? 100 : 150"
+          :height="$vuetify.breakpoint.xs ? 100 : 120"
         />
         <h4>{{ $t("home.award") }}</h4>
         <p>{{ $t("home.awardText") }}</p>
@@ -51,7 +54,6 @@
         >
       </v-col>
     </v-row>
-
   </v-container>
 </template>
 
