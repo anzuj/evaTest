@@ -7,9 +7,9 @@
         <div class="bubble bubble1"></div>
         <div class="bubble bubble2"></div>
         <div class="bubble bubble3"></div>
-        <div class="dot bubble-pulse"></div>
+        <!-- <div class="dot bubble-pulse"></div>
         <div class="dot dot2 bubble-pulse"></div>
-        <div class="dot dot3 bubble-pulse"></div>
+        <div class="dot dot3 bubble-pulse"></div> -->
 
         <div id="logotext">
           <div id="evatherm">EVATHERM</div>
@@ -77,6 +77,7 @@ export default {
   width: 10px;
   height: 10px;
   border-radius: 50%;
+    background-color: white;
   background: white;
 
   background: linear-gradient(
@@ -94,7 +95,8 @@ export default {
   left: 20px;
   border-radius: 50%;
 
-  /* background: white; */
+    background-color: white;
+  background: white;
   background: linear-gradient(
     180deg,
     rgb(255, 255, 255) 0%,
