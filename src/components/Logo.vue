@@ -3,15 +3,15 @@
     <!-- v-if="$vuetify.breakpoint.mdAndUp" -->
     <template>
       <div id="logoWrapper" class="d-flex">
-        <img src="../assets/logo.png" id="logoImg" />
-        <div class="bubble bubble1"></div>
-        <div class="bubble bubble2"></div>
-        <div class="bubble bubble3"></div>
-        <!-- <div class="dot bubble-pulse"></div>
-        <div class="dot dot2 bubble-pulse"></div>
-        <div class="dot dot3 bubble-pulse"></div> -->
+        <img src="../assets/logo.png" id="logoImg" style="z-index: 50"/>
+        <div class="bubble bubble1" style="z-index: 51"></div>
+        <div class="bubble bubble2" style="z-index: 51"></div>
+        <div class="bubble bubble3" style="z-index: 51"></div>
+        <div class="dot bubble-pulse" style="z-index: 51"></div>
+        <div class="dot dot2 bubble-pulse" style="z-index: 51"></div>
+        <div class="dot dot3 bubble-pulse" style="z-index: 51"></div>
 
-        <div id="logotext">
+        <div id="logotext" style="z-index: 52">
           <div id="evatherm">EVATHERM</div>
 
           <div id="crystal">A company for crystallization<br />technology</div>
