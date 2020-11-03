@@ -1,5 +1,5 @@
 <template>
-  <div class="hover-pointer ma-3" @click="$router.push({ path: '/' })">
+  <div class="hover-pointer ma-3 fade-in" @click="$router.push({ path: '/' })">
     <template>
       <div id="logoWrapper" class="d-flex">
         <img src="../assets/logo.gif" id="logoImg" />
