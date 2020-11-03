@@ -8,23 +8,22 @@
       <div
         class="mt-2 px-3 hover-pointer d-flex align-center navItem"
         :class="{
-          'border-right': i < navItems.length - 1,
-          'active-nav': navItems.link === $route.name,
+          'border-right': i < navItems.length - 1
         }"
-        v-for="(navLink, i) in navItems"
-        :key="navLink.text"
-        @click="handleNav(navLink)"
+        v-for="(nav, i) in navItems"
+        :key="nav.text"
+        @click="handleNav(nav)"
       >
         <div
           class="navText"
           :class="{
-            'active-nav': navLink.link === $route.name,
+            'active-nav': nav.link === $route.path,
           }"
-          v-text="$t(navLink.text)"
+          v-text="$t(nav.text)"
         ></div>
       </div>
 
-       <LanguageChange class="mt-n1"/>
+      <LanguageChange class="mt-n1" />
     </div>
 
     <!-- MOBILE VIEW -->
@@ -32,7 +31,6 @@
       <v-app-bar-nav-icon x-large @click.stop="drawer = !drawer" />
 
       <v-navigation-drawer
-      style="z-index: 9000"
         right
         :width="$vuetify.breakpoint.mdAndUp ? '50%' : '70%'"
         v-model="drawer"
@@ -45,7 +43,8 @@
 
         <v-list dense class="mt-0 pt-0">
           <template v-for="item in navItems">
-            <v-list-item :key="item.text" :to="item.link" link>
+            <!-- @click="handleNav(item)" -->
+            <v-list-item :key="item.text" router link :to="item.link" >
               <v-list-item-action>
                 <v-icon>{{ item.icon }}</v-icon>
               </v-list-item-action>
@@ -73,27 +72,25 @@ export default {
   data: () => ({
     drawer: false,
     navItems: [
-      { text: "nav.home", link: "home", icon: "home" },
-      { text: "nav.about", link: "about", icon: "groups" },
-      { text: "nav.tech", link: "technologies", icon: "engineering" },
+      { text: "nav.home", link: "/",  icon: "home" },
+      { text: "nav.about", link: "/about",  icon: "groups" },
+      { text: "nav.tech", link: "/technologies",  icon: "engineering" },
       {
         text: "nav.applications",
-        link: "applications",
+        link: "/applications",
         icon: "corporate_fare",
       },
-      { text: "nav.download", link: "downloads", icon: "cloud_download" },
-      { text: "nav.jobs", link: "jobs", icon: "business_center" },
-      { text: "nav.contact", link: "contact", icon: "mail_outline" },
+      { text: "nav.download", link: "/downloads", icon: "cloud_download" },
+      { text: "nav.jobs", link: "/jobs", icon: "business_center" },
+      { text: "nav.contact", link: "/contact", icon: "mail_outline" },
     ],
   }),
   methods: {
     handleNav(nav) {
-      if (nav.link === this.$route.name) {
+      if (nav.link === this.$route.path) {
         return;
-      }
-
-      if (nav.link) {
-        this.$router.push({ name: nav.link });
+      } else {
+        this.$router.push({ path: nav.link });
       }
     },
   },
