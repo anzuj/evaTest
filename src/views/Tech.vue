@@ -1,7 +1,8 @@
 <template>
-   <div class="text-center pa-10 slide-in">
-       <h3>Technologies content</h3>
-</div>
+  <div class="pa-10 slide-in">
+    <h1 class="primary--text text-uppercase">Technologies</h1>
+    <p class="font-italic">-- In progress --</p>
+  </div>
 </template>
 
 <script>

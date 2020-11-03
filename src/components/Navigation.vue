@@ -32,6 +32,7 @@
       <v-app-bar-nav-icon x-large @click.stop="drawer = !drawer" />
 
       <v-navigation-drawer
+      style="z-index: 9000"
         right
         :width="$vuetify.breakpoint.mdAndUp ? '50%' : '70%'"
         v-model="drawer"
